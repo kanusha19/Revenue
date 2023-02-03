@@ -1,0 +1,366 @@
+version: "3.1"
+
+stories:
+- story: ask_tel_with_button
+  steps:
+  - intent: greet
+  - action: action_Revenue
+
+
+- story: revenue
+  steps:
+  - intent: revenue
+  - action: action_Revenue_sub
+- story: revenue_cluster
+  steps:
+  - intent: cluster
+  - action: action_Cluster
+  - intent: cluster_Madh_names
+  - action: action_madhapur_cluster
+  - intent: Madhapur_cluster
+  - action: action_Madhapur_cluster_time
+  - action: action_restart
+
+- story: madhapur
+  steps:
+  - intent: Madh_unit
+  - action: action_Madhunit
+  - action: action_back
+- story: madh_opd
+  steps:
+  - intent: Unit_MAdhOPD
+  - action: action_Unit_MadOPD
+  - action: action_back
+
+- story: units
+  steps:
+  - intent: units
+  - action: action_units
+  - action: action_back
+
+- story: MOI Hitech
+  steps:
+  - intent: Unit_Hite
+  - action: action_Unit_MOIhitech
+  - action: action_back
+
+- story: Andh
+  steps:
+  - intent: cluster
+  - action: action_Cluster
+  - intent: cluster_Andh_names
+  - action: action_andhra_cluster
+  - intent: Andhra_Pradesh_cluster
+  - action: action_Andhra_cluster_time
+  - action: action_restart
+
+
+- story: Nellore
+  steps:
+  - intent: nellore_Unit
+  - action: action_Nellore
+  - action: action_back
+
+- story: Nellore_Oncology
+  steps:
+  - intent: Nellore_Oncology_unit
+  - action: action_Nellore_oncology
+  - action: action_back
+
+- story: vizag_adm
+  steps:
+  - intent: cluster
+  - action: action_Cluster
+  - intent: cluster_Vizag_names
+  - action: action_vizag_cluster
+  - intent: vizag_cluster
+  - action: action_Vizag_cluster_time
+  - action: action_restart
+
+- story: vizag w&c
+  steps:
+  - intent: Vizag_W&C_unit
+  - action: action_Unit_W&C
+  - action: action_back
+
+- story: vizag_MVP
+  steps:
+  - intent: Vizag_MVP_Unit
+  - action: action_Unit_MVP
+  - action: action_back
+
+- story: cluster_ROTA
+  steps:
+  - intent: cluster
+  - action: action_Cluster
+  - intent: cluster_ROTA_names
+  - action: action_rota_cluster
+  - intent: ROTA_cluster
+  - action: action_ROTA_cluster_time
+  - action: action_restart
+
+- story: cluster_MH
+  steps:
+  - intent: cluster
+  - action: action_Cluster
+  - intent: cluster_MH_names
+  - action: action_mh_cluster
+  - intent: MH_Cluster
+  - action: action_MH_cluster_time
+
+- story: center
+  steps:
+  - intent: center
+  - action: action_center
+  - intent: Center_sub
+  - action: action_Center_sub_time
+  - action: action_restart
+
+- story: MWC_Hitech
+  steps:
+  - intent: MWC_Hitech_unit
+  - action: action_Unit_MWC
+  - action: action_back
+
+- story: Group
+  steps:
+  - intent: Group
+  - action: action_Total
+  - action: action_restart
+- story: Group_time
+  steps:
+  - intent: Grand_Total
+  - action: action_Group
+  - action: action_back
+
+- story: units_MTD
+  steps:
+  - intent: units_MTD
+  - action: action_units_month
+  - action: action_back
+
+- story: Nellore_MTD
+  steps:
+  - intent: nellore_Unit_MTD
+  - action: action_Nellore_month
+  - action: action_back
+
+- story: Nellore_Oncology_MTD
+  steps:
+  - intent: Nellore_Oncology_unit_MTD
+  - action: action_Nellore_oncology_month
+  - action: action_back
+
+- story: madh_opd_MTD
+  steps:
+  - intent: Unit_MAdhOPD_MTD
+  - action: action_Unit_MadOPD_month
+  - action: action_back
+
+- story: MOI Hitech_MTD
+  steps:
+  - intent: Unit_Hite_MTD
+  - action: action_Unit_MOIhitech_month
+  - action: action_back
+
+- story: madhapur_MTD
+  steps:
+  - intent: Madh_unit_MTD
+  - action: action_Madhunit_month
+  - action: action_back
+
+- story: vizag_MVP_MTD
+  steps:
+  - intent: Vizag_MVP_Unit_MTD
+  - action: action_Unit_MVP_month
+  - action: action_back
+
+- story: vizag w&c_MTD
+  steps:
+  - intent: Vizag_W&C_unit_MTD
+  - action: action_Unit_W&C_month
+  - action: action_back
+
+- story: MWC_Hitech_MTD
+  steps:
+  - intent: MWC_Hitech_unit_month
+  - action: action_Unit_MWC_month
+  - action: action_back
+
+- story: Group_time_MTD
+  steps:
+  - intent: Grand_Total_MTD
+  - action: action_Group_month
+  - action: action_back
+
+- story: admission
+  steps:
+  - intent: admission
+  - action: action_admission_sub
+- story: admission_cluster
+  steps:
+  - intent: cluster_admission
+  - action: action_Cluster_admission
+  - intent: cluster_Madh_names_admission
+  - action: action_madhapur_cluster_admission
+  - intent: Madhapur_cluster_admission
+  - action: action_Madhapur_time_admission
+  - action: action_restart
+
+- story: Madh_unit_adm
+  steps:
+  - intent: Madh_unit_admission
+  - action: action_Madhapur_admission
+  - action: action_back
+
+- story: Unit_MCI_adm
+  steps:
+  - intent: MCI_admission
+  - action: action_Unit_MCI_admission
+  - action: action_back
+
+- story: cluster_andh_admission
+  steps:
+  - intent: cluster_admission
+  - action: action_Cluster_admission
+  - intent: cluster_Andh_names_admission
+  - action: action_andhra_cluster_admission
+  - intent: Andhra_Pradesh_cluster_admission
+  - action: action_Andhra_time_admission
+  - action: action_restart
+
+- story: Nellore_MTD_admis
+  steps:
+  - intent: nellore_Unit_admission
+  - action: action_Nellore_admission
+  - action: action_back
+
+- story: Unit_adm
+  steps:
+  - intent: units_admission
+  - action: action_Unit_admission
+  - action: action_back
+
+- story: cluster_vizag_admission
+  steps:
+  - intent: cluster_admission
+  - action: action_Cluster_admission
+  - intent: cluster_Vizag_names_admission
+  - action: action_vizag_cluster_admission
+  - intent: vizag_cluster_admission
+  - action: action_Vizag_time_admission
+  - action: action_restart
+
+- story: Unit_Vizag_MVP
+  steps:
+  - intent: Vizag_MVP_Unit_admission
+  - action: action_Unit_vizag_MVP_admission
+  - action: action_back
+
+- story: Unit_W&C_adm
+  steps:
+  - intent: Vizag_W&C_unit_admission
+  - action: action_Unit_W&C_admission
+  - action: action_back
+
+- story: Unit_MWC_Hitech_adm
+  steps:
+  - intent: MWC_Hitech_unit_admission
+  - action: action_Unit_MWC_admission
+  - action: action_back
+
+- story: cluster_ROTA_admission
+  steps:
+  - intent: cluster_admission
+  - action: action_Cluster_admission
+  - intent: cluster_ROTA_names_admission
+  - action: action_rota_cluster_admission
+  - intent: ROTA_cluster_admission
+  - action: action_ROTA_time_admission
+  - action: action_restart
+
+- story: cluster_MH_admission
+  steps:
+  - intent: cluster_admission
+  - action: action_Cluster_admission
+  - intent: cluster_MH_names_admission
+  - action: action_mh_cluster_admission
+  - intent: MH_Cluster_admission
+  - action: action_MH_time_admission
+  - action: action_restart
+
+- story: center_admission
+  steps:
+  - intent: center_admission
+  - action: action_Center_admission
+  - intent: Center_sub_admission
+  - action: action_Center_sub_admission_time
+  - action: action_restart
+
+- story: Group_admission
+  steps:
+  - intent: Group_admission
+  - action: action_Total_admission
+  - action: action_restart
+- story: Group_time
+  steps:
+  - intent: Grand_Total_admission
+  - action: action_Group_admission
+  - action: action_back
+
+- story: Unit_adm_month
+  steps:
+  - intent: units_MTD_admission
+  - action: action_Unit_admission_month
+  - action: action_back
+
+- story: Nellore_Unit_adm_month
+  steps:
+  - intent: nellore_Unit_MTD_admission
+  - action: action_Nellore_admission_month
+  - action: action_back
+
+- story: Unit_MCI_adm_missing
+  steps:
+  - intent: MCI_admission_month
+  - action: action_Unit_MCI_admission_month
+  - action: action_back
+- story: Unit_Vizag_MVP_month
+  steps:
+  - intent: Vizag_MVP_Unit_admission_MTD
+  - action: action_Vizag_MVP_admission_month
+  - action: action_back
+
+- story: Unit_VizagW&C_adm_month
+  steps:
+  - intent: Vizag_W&C_unit_admission_MTD
+  - action: action_Vizag_W&C_admission_month
+  - action: action_back
+
+- story: Unit_MWC_adm_month
+  steps:
+  - intent: MWC_Hitech_unit_admission_month
+  - action: action_MWC_admission_month
+  - action: action_back
+
+- story: Madh_unit_adm_time
+  steps:
+  - intent: Madh_unit_MTD_admission
+  - action: action_Madhapur_admission_month
+  - action: action_back
+
+- story: Grand
+  steps:
+  - intent: Grand_Total_MTD_admission
+  - action: action_Group_admission_month
+  - action: action_back
+- story: Back
+  steps:
+  - intent: back
+  - action: action_revenue
+  - action: action_restart
+  
+- story: Exit
+  steps:
+  - intent: Exit
+  - action: utter_Thankyou

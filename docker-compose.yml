@@ -1,0 +1,36 @@
+services:
+  rasa:
+    build: .
+    environment:
+      - SQLALCHEMY_SILENCE_UBER_WARNING=1
+    command: ["rasa","run","-m","models","--endpoints","endpoints.yml","--port","5002","--credentials","credentials.yml","--cors","*"]
+    ports:
+      - 5002:5002
+    depends_on:
+      - duckling
+      - actions
+    volumes:
+      - .:/app
+  actions:
+    build: .
+    command: ["rasa", "run", "actions"]
+    ports:
+      - 5055:5055
+    volumes:
+      - .:/app
+  duckling:
+    image: rasa/duckling
+    ports:
+      - 8000:8000
+    environment:
+      - URL=http://localhost:8000
+    command: ["duckling-example-exe", "-p", "8000", "--no-access-log", "--no-error-log"]
+#  xampp:
+#    image: edyan/xampp:7.4.12
+#    ports:
+#      - "8080:80"
+#      - "4433:443"
+#    volumes:
+#      - ./htdocs:/app/htdocs
+#      - ./logs:/app/logs
+#      - ./conf:/app/conf

@@ -1,0 +1,348 @@
+version: "3.1"
+
+intents:
+  - greet
+  - month_missing
+  - back
+  - revenue
+  - center
+  - cluster
+  - units
+  - Center_sub
+  - Group
+  - cluster_Madh_names
+  - cluster_Andh_names
+  - cluster_Vizag_names
+  - cluster_ROTA_names
+  - cluster_MH_names
+  - Madhapur_cluster
+  - Andhra_Pradesh_cluster
+  - vizag_cluster
+  - ROTA_cluster
+  - MH_Cluster
+  - Time_period
+  - Nellore_Oncology_unit
+  - nellore_Unit
+  - Grand_Total
+  - Unit_MAdhOPD
+  - Unit_Hite
+  - Madh_unit
+  - MWC_Hitech_unit
+  - Vizag_MVP_Unit
+  - Vizag_W&C_unit
+  - Nellore_Oncology_unit_MTD
+  - units_MTD
+  - Grand_Total_MTD
+  - Unit_MAdhOPD_MTD
+  - MWC_Hitech_unit_MTD
+  - Madh_unit_MTD
+  - Vizag_MVP_Unit_MTD
+  - Vizag_W&C_unit_MTD
+  - Center_sub_admission
+  - Madhapur_cluster_admission
+  - Andhra_Pradesh_Cluster_admission
+  - vizag_cluster_admission
+  - ROTA_cluster_admission
+  - MH_Cluster_admission
+  - units_MTD_admission
+  - units_admission
+  - Grand_Total_MTD_admission
+  - Grand_Total_admission
+  - nellore_Unit_MTD_admission
+  - nellore_Unit_admission
+  - MCI_admission_month
+  - MCI_admission
+  - Madh_unit_MTD_admission
+  - Madh_unit_admission
+  - nellore_Unit_MTD
+  - Unit_Hite_MTD
+  - Andhra_Pradesh_cluster_admission
+  - admission
+  - cluster_admission
+  - cluster_Madh_names_admission
+  - cluster_Andh_names_admission
+  - cluster_Vizag_names_admission
+  - cluster_ROTA_names_admission
+  - cluster_MH_names_admission
+  - center_admission
+  - Group_admission
+  - Exit
+  - MWC_Hitech_unit_month
+  - Vizag_W&C_unit_admission_MTD
+  - Vizag_W&C_unit_admission
+  - Vizag_MVP_Unit_admission_MTD
+  - Vizag_MVP_Unit_admission
+  - MWC_Hitech_unit_admission_month
+  - MWC_Hitech_unit_admission
+  - bye
+
+entities:
+  - time
+  - date_slot
+  - Unit_MAdhOPD
+  - units
+  - Unit_Hite
+  - unit_Madh
+  - MWC_unit
+  - MVP_Unit
+  - W&C_unit
+  - Nellore_Oncology_unit
+  - nellore_Unit
+  - vizag_Revenue_unit1
+  - ROTA_Revenue_unit1
+  - MH_Revenue_unit1
+  - Center_sub_unit1
+  - Group
+  - Madhapur_Revenue_unit1
+  - Andhra_Pradesh_Revenue_unit1
+  - Grand_Total
+  - Vizag_unit
+  - ROTA_admission_unit1
+  - back
+  - MWC_unit_adm
+  - MVP_Unit_adm
+
+
+slots:
+  Group:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: Group
+
+  Grand_Total:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: Grand_Total
+
+  ROTA_admission_unit1:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: ROTA_admission_unit1
+  MWC_unit_adm:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: MWC_unit_adm
+  MVP_Unit_adm:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: MVP_Unit_adm
+  back:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: back
+  Center_sub_unit1:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: Center_sub_unit1
+  Madhapur_Revenue_unit1:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: Madhapur_Revenue_unit1
+  nellore_Unit:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: nellore_Unit
+  Nellore_Oncology_unit:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: Nellore_Oncology_unit
+  Andhra_Pradesh_Revenue_unit1:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: Andhra_Pradesh_Revenue_unit1
+  vizag_Revenue_unit1:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: vizag_Revenue_unit1
+  ROTA_Revenue_unit1:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: ROTA_Revenue_unit1
+  MH_Revenue_unit1:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: MH_Revenue_unit1
+  MWC_unit:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: MWC_unit
+  W&C_unit:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: W&C_unit
+  Vizag_unit:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: Vizag_unit
+  MVP_Unit:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: MVP_Unit
+  unit_Madh:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: unit_Madh
+  Unit_Hite:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: Unit_Hite
+  Unit_MAdhOPD:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: Unit_MAdhOPD
+  units:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: units
+  time:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: time
+  date_slot:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: date_slot
+responses:
+  utter_bye:
+  - text: "Bye."
+  utter_greet:
+  - text: "Hey! Boss, How can I help you"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_submit:
+  - text: "All done!"
+
+  utter_did_that_help:
+  - text: "Did that help you"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_report_message:
+  - text: "A Report tracker to help you with fetching key values from the daily business management report."
+
+  utter_name:
+  - text: "Before proceed with report tracker,may i know your Name"
+
+  utter_default:
+  - text: "I am sorry,I didn't get that. Could you please repeat your query"
+
+  utter_month_missing:
+  - text: "Please enter the year and month for units"
+
+  utter_unit_missing:
+  - text: "Please enter the unit name for month and year."
+
+  utter_language:
+  - text: "As of now I can speak only english."
+
+  utter_Thankyou:
+  - text: "Thank You"
+  utter_otherapplication:
+  - text: "For other applications, Currently we are in developing stage."
+  utter_iamabot:
+  - text: "I am a Boss, powered by Medicover Hospitals."
+
+  utter_goodbye:
+  - text: "See you soon"
+actions:
+ - action_Revenue
+ - action_revenue
+ - action_Revenue_sub
+ - action_madhapur_cluster
+ - action_Madhapur_cluster_time
+ - action_Madhunit
+ - action_back
+ - action_Unit_MadOPD
+ - action_units
+ - action_Unit_MOIhitech
+ - action_andhra_cluster
+ - action_Andhra_cluster_time
+ - action_Nellore
+ - action_Nellore_oncology
+ - action_vizag_cluster_admission
+ - action_vizag_cluster
+ - action_Unit_W&C
+ - action_Unit_MVP
+ - action_rota_cluster
+ - action_ROTA_cluster_time
+ - action_mh_cluster
+ - action_MH_cluster_time
+ - action_center
+ - action_Center_sub_time
+ - action_Unit_MWC
+ - action_Total
+ - action_Group
+ - action_units_month
+ - action_Nellore_month
+ - action_Nellore_oncology_month
+ - action_Unit_MadOPD_month
+ - action_Unit_MOIhitech_month
+ - action_Madhunit_month
+ - action_Unit_MVP_month
+ - action_Unit_W&C_month
+ - action_Unit_MWC_month
+ - action_Group_month
+ - action_admission_sub
+ - action_Cluster_admission
+ - action_madhapur_cluster_admission
+ - action_Madhapur_time_admission
+ - action_Madhapur_admission
+ - action_Unit_MCI_admission
+ - action_andhra_cluster_admission
+ - action_Andhra_time_admission
+ - action_Nellore_admission
+ - action_Unit_admission
+ - action_Vizag_time_admission
+ - action_rota_cluster_admission
+ - action_ROTA_time_admission
+ - action_mh_cluster_admission
+ - action_MH_time_admission
+ - action_Center_admission
+ - action_Center_sub_admission_time
+ - action_Total_admission
+ - action_Group_admission
+ - action_Unit_admission_month
+ - action_Nellore_admission_month
+ - action_Unit_MCI_admission_month
+ - action_Madhapur_admission_month
+ - action_Group_admission_month
+ - action_Cluster
+ - action_Vizag_cluster_time
+ - action_name
+ - action_Unit_MWC_admission
+ - action_Unit_vizag_MVP_admission
+ - action_Unit_W&C_admission
+ - action_Vizag_MVP_admission_month
+ - action_Vizag_W&C_admission_month
+ - action_MWC_admission_month
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
