@@ -1371,7 +1371,7 @@ class ActionUnitWiseMadhapur_admission_month(Action):
         Madh=hite.replace(hite, "Madhapur")
         for d in m:
             if d["branch"]==Madh:
-                message=dispatcher.utter_message("Hey,Here are the results "+"\nLocation: "+d["branch"]+ ",\ntarget: " + d["plan"]+ ",\nAchieved: " +d["adm"]+ ",\nAchieved Percentage: "+d["ach"]+",\nMTD: "+d["mtd"]+",\nGap: "+d["gap"])
+                message=dispatcher.utter_message("Hey,Here are the results "+"\nLocation: "+d["branch"]+ ",\nTarget: " + d["plan"]+ ",\nAchieved: " +d["adm"]+ ",\nAchieved Percentage: "+d["ach"]+",\nMTD: "+d["mtd"]+",\nGap: "+d["gap"])
                 return []
 class ActionUnitMonthadm(Action):
     def name(self) -> Text:

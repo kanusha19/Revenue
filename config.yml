@@ -22,7 +22,7 @@ pipeline:
     use_word_boundaries: True
   - name: EntitySynonymMapper
   - name: DucklingEntityExtractor
-    url: "http://localhost:8000"
+    url: "http://duckling:8001"
     dimension: ["time"]
     locale: 'en_GB'
     timeout: 3

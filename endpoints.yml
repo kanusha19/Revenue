@@ -11,9 +11,10 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 action_endpoint:
-  url: "http://localhost:5055/webhook"
+  url: "http://action-server:5055/webhook"
 
-
+duckling_http_extractor:
+  url: "http://duckling:8001"
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
 # https://rasa.com/docs/rasa/tracker-stores
